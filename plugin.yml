@@ -1,0 +1,8 @@
+name: StatusTag
+main: STG\Main
+version: 1.0
+author: SavionLegendZzz
+commands:
+   wu:
+      description: "StatusTag main command"
+      permission: "wu.cmd.wu"
