@@ -23,5 +23,15 @@ public function onEnable() {
 		 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
         if(strtolower($cmd->getName()) === "wu") {
             if(isset($args[0])) {
-                $name = $args[0];
-               //brb gonna eat
+            if($sender instanceof PLayer){
+                $status = $args[0];
+               //if you are reading this hi
+               $sender->setNameTag(implode(" ",$sender->getName()."\n".$status));
+               //implode or explode?
+$sender->sendMessage("Status updated");
+
+
+}
+}
+}
+}
