@@ -22,7 +22,7 @@ public function onEnable() {
 		 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
         if(strtolower($cmd->getName()) === "wu") {
             if(isset($args[0])) {
-              if($sender instanceof PLayer){
+              if($sender instanceof Player){
                 $status = $args[0];
                   $sender->setNameTag(implode(" ",$sender->getName()."\n".$status));
                    $sender->sendMessage("Status updated");
