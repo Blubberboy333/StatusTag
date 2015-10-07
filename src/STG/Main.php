@@ -17,18 +17,15 @@ public function onEnable() {
 		
         
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
-		
 		}
 		
 		 public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
         if(strtolower($cmd->getName()) === "wu") {
             if(isset($args[0])) {
-            if($sender instanceof PLayer){
+              if($sender instanceof PLayer){
                 $status = $args[0];
-               //if you are reading this hi
-               $sender->setNameTag(implode(" ",$sender->getName()."\n".$status));
-               //implode or explode?
-$sender->sendMessage("Status updated");
+                  $sender->setNameTag(implode(" ",$sender->getName()."\n".$status));
+                   $sender->sendMessage("Status updated");
 
 
 }
