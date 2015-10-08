@@ -3,6 +3,21 @@ main: STG\Main
 version: 1.0
 author: SavionLegendZzz
 commands:
-   wu:
-      description: "StatusTag main command"
-      permission: "wu.cmd.wu"
+  wu: # Use spaces when making plugin.yml files, not tabs. 2 or 4 spaces will do fine
+    usage: /wu <status> # Always add usage
+    description: "StatusTag main command"
+    permission: "wu.cmd.wu" # If you're going to use permissions, you need to add them to the plugin.yml
+# The permissions section would be like this
+permissions:
+  wu:
+    default: false
+    description: Allows the player to use all of the StatusTag features
+    children:
+      wu.cmd:
+        default: op
+        description: Allows the player to use all of the StatusTag features
+        children:
+          wu.cmd.wu:
+            default: true
+            description: Allows the player to set their status
+   
